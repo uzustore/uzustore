@@ -1,81 +1,204 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- 웹페이지 보이지는 않지만, 필요한 설정을 해두는 곳이에요.
-             우리가 집을 위해 미리 생각 해놓은 것을 적어두는 곳이라고 할 수 있죠!-->
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="우주상점" />
-        <meta property="og:description" content="아기자기 소품 천국 우주상점" />
-        <meta property="og:image" content="우주상점.jpg" />
-        <title>우주상점</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="우주상점">
+    <meta property="og:description" content="아기자기 소품 선물가게 우주상점">
+    <meta property="og:image" content="우주상점.jpg">
+    <title>우주상점</title>
+    <style>
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-*       {
-    font-family: "Pretendard",serif;
+        * {
+            font-family: "Pretendard",serif;
         }
-         body{background-color: black;}
-         .wrap{width: 300px;
-                margin: 30px auto 0px auto;
+        body {
+            background-color: #f4c5d7;
+            height: 100vh;
+          }
+        .profile {
+            width: 150px;
+            height: 150px;
+            
+            background-image: url('2.png');
+            background-position: center;
+            background-size: cover;
+
+            border-radius: 100%;
+        }
+        .main {
+            color : #090909;
+            font-size: 27px;
+            size : 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .sub {
+            color : #1c1c1c;
+            font-size: 16px;
+            size : 14px;
+            margin-top: 0px;
+            margin-bottom: 15px;
+        }
+        .wrap {
+            width: 350px;
+            margin: 30px auto 0px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .bigbutton {
+            width: 240px;
+            height: 50px;
+            border-radius: 8px;
+            background-color: white;
+            margin-bottom: 13px;
+            font-size: 14px;
+
+            color:#000000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0px 4px 16px rgba(199, 199, 199, 0.2);
+        }
+        .buttons > a {
+            width: 152px;
+            height: 59px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 400;
+
+            color:#090909;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0px 4px 16px rgba(232, 52, 78, 0.2);
+            margin: 0px 8px 12px 8px;
+        }
+        .dding {
+            background-color: #FFF1AC;
+        }
+        .online {
+            background-color: #F9CEEE;
+        }
+        .hang {
+            background-color: #F9CEEE;
+        }
+        .chang {
+            background-color: #FFF1AC;
+        }
+        .buttons {
+            display: flex;
+        }
+        .wrap > a:hover {
+            background-color: #f2f2f2;
+        }
+        .minis {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+        .minis > a {
+            width: 102px;
+            height: 48px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            white-space:pre-wrap;
+        }
+        .minis > a:hover{color:#000000;}
+        .qna {
+            background: #FF74B1;
+            color:#2b2b2b;
+        }
+        .insta {
+            background: #BEEBE9;
+            color:#2b2b2b;
+        }
+        .shoping {
+            background: #FF74B1;
+            color:#2b2b2b;
+        }
+        .cont {width: 320px; height: 240px;
+                border: 1px solid #FFD6EC;
+                border-radius: 20px;
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;}
-         .profile{width: 180px;height: 180px;
-                border-radius: 100%;
-                border: 3px solid rgb(56, 56, 56);
-                background-image: url('1.png');
-                background-position: center;
-                background-size: cover;}
-        .main{color: white; font-size: 27px;
-              margin-top: 25px; margin-bottom: 0px;}
-        .sub{color: white; font-size: 22px; margin-bottom: 25px;}
-        .wrap > a {width: 280px; height: 50px;
-                    background-color: rgb(230, 230, 230); 
-                    border-radius: 10px;
+                align-items: center;
+                }
+        .cont_tt{color:#2c2c2c;
+                font-size: 18px;
+                font-weight: bold;}
+        .conts {width: 320px; height: 180px;
+        border-radius: 20px;
 
-                    margin-bottom: 15px;
-
-                    font-size: 19px; 
-                    font-weight: bold;
-                    color: black;
-                    text-decoration: none;
-                    box-shadow: 3px 3px 5px 0px rgb(34, 34, 34);
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;}
-        .wrap > a:hover {background-color:#6b6b6b;
-                         color:white}
-        .foot{width: 280px; height: 120px;
-                color: #383838;
-                font-size: 14px;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;}
-        .foot > p{margin-bottom: -10px;}
-        </style>
-    </head>
-    <body>
-        <div class="wrap">
-            <div class="profile"></div>
-            <h1 class="main">우주상점</h1>
-            <p class="sub">아기자기 소품가게 우주상점</p>
-            <a target="_blank" href="https://instagram.com/uzu.store_gc/">우주상점 인스타</a>
-            <a target="_blank" href="https://uzustore.shockping.com/shop/list">온라인 마켓</a>
-            <a target="_blank" href="https://naver.me/FH7saFlk">오프라인 매장 위치</a>
-            <a target="_blank" href="http://pf.kakao.com/_Rxlcxib/chat">문의하기</a>
-            <div class="foot">
-                <p>우주상점</p>
-                <p>대표 : 이도현</p>
-                <p>010-5610-5140</p>
-                <p>경남 거창군 거창읍 하동1길20 우주상점</p>            
-                <p>카카오뱅크 3333-05-7280002 이도현</p>                
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        }
+        .cont_tt2{color:#353535;
+        font-size: 18px;
+        font-weight: bold;
+        }
+        .foot{font-size: 8px; color: #252621;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="profile"></div>
+        <h1 class="main">우주상점</h1>
+        <p class="sub">아기자기 소품가게 우주상점</p>
+        <div class="minis">
+            <a class="shoping" target="_blank" href="https://smartstore.naver.com/uzustore1st">스마트스토어   ></a>
+            <a class="insta" target="_blank" href="https://www.instagram.com/uzu.store_gc/">인스타그램        ></a>
+            <a class="qna" target="_blank" href="https://uzustore.shockping.com/shop/list">온라인샵            ></a>
+                        
+            
+        </div>
+        <div class="cont">
+        <p class="cont_tt">핫템 선예약하기</p>
+        <a class="bigbutton"target="_blank" href="">🎄댄싱 트리와 산타친구들🎄</a>
+        <a class="bigbutton"target="_blank" href="">❣원형 레더 네임택❣</a>
+        <a class="bigbutton"target="_blank" href="">🌸🌸</a>
+        </div>
+        <div class="conts">
+            <p class="cont_tt2">우주상점 더보기</p>
+            <div class="buttons">
+                <a class="dding" target="_blank" href="https://naver.me/FH7saFlk">매장정보</a>
+                <a class="online"target="_blank" href="http://pf.kakao.com/_Rxlcxib/chat">문의하기</a>
+            </div>
+            <div class="buttons">
+                <a class="hang" target="_blank" href="https://www.instagram.com/211211_dohyung/">우주부부 인스타</a>
+                <a class="chang"target="_blank" href="http://www.newshd.kr/news/articleView.html?idxno=22719">우주언니 인터뷰</a>
             </div>
         </div>
-    </body>
+        <div class="foot">
+            <p>우주상점|이도현|010-5610-5140</p>
+            <p style="margin-top: -8px;">@Uzustore_LeeDoHyun</p>
+        </div>
+    </div>
+</body>
 </html>
